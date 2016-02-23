@@ -1,0 +1,21 @@
+<div class "container">
+  
+  <p>
+  	<h1><center><%= @article.title %></center></h1>
+  </p>
+   
+  <p>
+  	<div class ="well">
+      <%= @article.text %>
+    </div>
+  </p>
+   
+  <h2>Comments</h2>
+  <%= render @article.comments %>
+   
+  <h2>Add a comment:</h2>
+  <%= render 'comments/form' %>
+   
+  <%= link_to 'Edit', edit_article_path(@article), class: " label label-warning"%>
+  <%= link_to 'Back', articles_path, class: " label label-primary"%> 
+</div>

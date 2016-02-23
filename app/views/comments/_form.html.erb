@@ -1,0 +1,16 @@
+<div class "container">
+
+  <%= form_for([@article, @article.comments.build]) do |f| %>
+    <p>
+      <%= f.label :commenter %><br>
+      <%= f.text_field :commenter, class: "form-control article-inputcom"%>
+    </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.text_area :body, class: "form-control article-textarea1" %>
+    </p>
+    <p>
+      <%= f.submit class: 'btn btn-success'%>
+    </p>
+  <% end %> 
+</div>
